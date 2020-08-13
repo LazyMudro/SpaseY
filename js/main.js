@@ -9,5 +9,13 @@ var instance = new vidbg(".video", {
   var rellax = new Rellax('.rocket');
   if (document.body.clientWidth < 600){
     rellax.destroy();
+
+    function removeAos() {
+    var elem = document.getElementById('aos-css-file');
+    elem.parentNode.removeChild(elem);
+    return false;
+  }
+  removeAos();
+
   }
   AOS.init();
